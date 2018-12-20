@@ -82,6 +82,7 @@
 - (void)timerMethod {
     
     if (--_settingInterval <= 0) {
+        !self.xkTimerCounting ?: self.xkTimerCounting(0);
         _settingInterval = self.timerInterval;
         [self.timer invalidate];
         self.timer = nil;
@@ -90,9 +91,8 @@
         self.userInteractionEnabled = YES;
         return;
     }
-    
+    !self.xkTimerCounting ?: self.xkTimerCounting(_settingInterval);
     [self setTitle:[NSString stringWithFormat:@"%@%02ld%@",self.countingPrefix,_settingInterval,self.countingSuffix] forState:UIControlStateNormal];
-    
 }
 
 #pragma mark override
@@ -122,11 +122,11 @@
 }
 
 /*
-// Only override drawRect: if you perform custom drawing.
-// An empty implementation adversely affects performance during animation.
-- (void)drawRect:(CGRect)rect {
-    // Drawing code
-}
-*/
+ // Only override drawRect: if you perform custom drawing.
+ // An empty implementation adversely affects performance during animation.
+ - (void)drawRect:(CGRect)rect {
+ // Drawing code
+ }
+ */
 
 @end

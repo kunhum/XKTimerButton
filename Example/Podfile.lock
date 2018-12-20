@@ -1,5 +1,5 @@
 PODS:
-  - XKTimerButton (1.0.0)
+  - XKTimerButton (1.0.1)
 
 DEPENDENCIES:
   - XKTimerButton (from `../`)
@@ -9,7 +9,7 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  XKTimerButton: c8eeb9cad258f3dfb09312f110b0325d534f2962
+  XKTimerButton: 724fa312f3bcf3cfd9818f206f3bce5f0fe0cb84
 
 PODFILE CHECKSUM: ee780170c7008d27cd1fdaa6fb71e8a29ad444a2
 
