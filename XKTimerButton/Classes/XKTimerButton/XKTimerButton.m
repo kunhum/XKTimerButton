@@ -115,9 +115,8 @@
     
     self.timer = [NSTimer scheduledTimerWithTimeInterval:1 target:self selector:@selector(timerMethod) userInfo:nil repeats:YES];
     [[NSRunLoop currentRunLoop] addTimer:self.timer forMode:NSRunLoopCommonModes];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        [self setTitleColor:self.countingTextColor  forState:UIControlStateNormal];
-    });
+    [self setTitleColor:self.countingTextColor forState:UIControlStateNormal];
+    self.backgroundColor = self.countingBackgroundColor;
     self.userInteractionEnabled = NO;
 }
 
